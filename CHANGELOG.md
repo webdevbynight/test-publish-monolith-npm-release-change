@@ -1,5 +1,15 @@
 # @webdevbynight/test-publish-monolith-npm-release-change
 
+## 0.0.2
+
+### Patch changes
+
+- make repo public (#4) ([`9d9cceb`](https://github.com/webdevbynight/test-publish-monolith-npm-release-change/commit/9d9cceb91f506c2b10d02dba0732eeba63d1a5fa))
+
+---
+
+**Full changelog:** [`v0.0.1...v0.0.2`](https://github.com/webdevbynight/test-publish-monolith-npm-release-change/compare/v0.0.1...v0.0.2)
+
 ## 0.0.1
 
 ### Patch changes
