@@ -1,0 +1,29 @@
+name: Run tests
+
+on:
+  pull_request:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  run-tests:
+    name: Run tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Setup Node.js
+        uses: ./.github/actions/node
+      - name: Install TypeScript
+        run: npm install typescript
+      - name: Install Vitest
+        run: npm install vitest
+      - name: Build the package
+        run: npm run build
+      - name: Run Vitest
+        run: npm run test
