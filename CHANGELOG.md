@@ -1,5 +1,15 @@
 # @webdevbynight/test-publish-monolith-npm-release-change
 
+## 0.0.3
+
+### Patch changes
+
+- fix badges (#6) ([`aad5264`](https://github.com/webdevbynight/test-publish-monolith-npm-release-change/commit/aad52642f3889c4f2d7c87e968c9977823442ba1))
+
+---
+
+**Full changelog:** [`v0.0.2...v0.0.3`](https://github.com/webdevbynight/test-publish-monolith-npm-release-change/compare/v0.0.2...v0.0.3)
+
 ## 0.0.2
 
 ### Patch changes
