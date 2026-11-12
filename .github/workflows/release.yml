@@ -35,3 +35,10 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           NPM_CONFIG_PROVENANCE: true
         run: npx @release-change/cli
+      - name: Just say hello
+        id: hello
+        uses: webdevbynight/webdevbynight-test-action@v0
+        with:
+          who-to-greet: npm user
+      - name: Just tell the time
+        run: echo "The time was ${{ steps.hello.outputs.time }}."
