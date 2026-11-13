@@ -29,7 +29,10 @@ jobs:
       - name: Build the package
         run: npm run build
       - name: Release
-        uses: release-change/action@v0.0.1
         env:
+          RELEASE_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+          ISSUE_PR_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           NPM_CONFIG_PROVENANCE: true
+          IS_GITHUB_APP: "true"
+        run: npx @release-change/cli --debug
