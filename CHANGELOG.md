@@ -1,5 +1,15 @@
 # @webdevbynight/test-publish-monolith-npm-release-change
 
+## 0.0.4
+
+### Patch changes
+
+- revert release workflow (#10) ([`c4b8f2d`](https://github.com/webdevbynight/test-publish-monolith-npm-release-change/commit/c4b8f2ddb1a1d4a13e08a35b363986f48f997923))
+
+---
+
+**Full changelog:** [`v0.0.3...v0.0.4`](https://github.com/webdevbynight/test-publish-monolith-npm-release-change/compare/v0.0.3...v0.0.4)
+
 ## 0.0.3
 
 ### Patch changes
