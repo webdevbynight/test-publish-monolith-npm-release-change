@@ -34,6 +34,7 @@ jobs:
       - name: Setup Git config
         env:
           APP_SLUG: ${{ steps.app-token.outputs.app-slug }}
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
         run: |
           APP_USER="$APP_SLUG[bot]"
           APP_ID="$(gh api "/users/$APP_USER" --jq .id)"
