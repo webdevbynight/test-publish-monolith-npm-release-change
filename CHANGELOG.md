@@ -1,5 +1,15 @@
 # @webdevbynight/test-publish-monolith-npm-release-change
 
+## 0.0.5
+
+### Patch changes
+
+- try to use default GitHub token as release token (#12) ([`d91c9a5`](https://github.com/webdevbynight/test-publish-monolith-npm-release-change/commit/d91c9a551f5c6d8cb80053a2119e7ffbc484000f))
+
+---
+
+**Full changelog:** [`v0.0.4...v0.0.5`](https://github.com/webdevbynight/test-publish-monolith-npm-release-change/compare/v0.0.4...v0.0.5)
+
 ## 0.0.4
 
 ### Patch changes
