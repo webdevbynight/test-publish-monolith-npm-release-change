@@ -1,5 +1,20 @@
 # @webdevbynight/test-publish-monolith-npm-release-change
 
+## 0.0.6
+
+### Patch changes
+
+- remove `persist-credentials: false` (#19) ([`b3ca2c2`](https://github.com/webdevbynight/test-publish-monolith-npm-release-change/commit/b3ca2c264448dd54ff2008cc009fd6c4dde32df8))
+- remove `gh auth setup-git` (#18) ([`4501149`](https://github.com/webdevbynight/test-publish-monolith-npm-release-change/commit/450114919acd08ec47c689b016a4ff41289ca7e9))
+- set `GH_TOKEN` environment variable (#17) ([`7a52673`](https://github.com/webdevbynight/test-publish-monolith-npm-release-change/commit/7a52673947d4c006cbd078dafbe57179a955d75b))
+- setup Git config (#16) ([`1adec1c`](https://github.com/webdevbynight/test-publish-monolith-npm-release-change/commit/1adec1c7153141da3e8f2f887e9b5f8e49cc488b))
+- add `ref` input (#15) ([`1c0d7ee`](https://github.com/webdevbynight/test-publish-monolith-npm-release-change/commit/1c0d7eef8fa43a6f3a3d8e8697c1b087995e7a52))
+- replace GitHub Actions bot by private GitHub App (#14) ([`44dbc2a`](https://github.com/webdevbynight/test-publish-monolith-npm-release-change/commit/44dbc2a8ccb596f3df493eed67ba3393d55ae6eb))
+
+---
+
+**Full changelog:** [`v0.0.5...v0.0.6`](https://github.com/webdevbynight/test-publish-monolith-npm-release-change/compare/v0.0.5...v0.0.6)
+
 ## 0.0.5
 
 ### Patch changes
