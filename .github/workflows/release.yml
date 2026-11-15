@@ -40,7 +40,6 @@ jobs:
           APP_ID="$(gh api "/users/$APP_USER" --jq .id)"
           git config user.name "$APP_USER"
           git config user.email "$APP_ID+$APP_USER@users.noreply.github.com"
-          gh auth setup-git
       - name: Setup Node.js
         uses: ./.github/actions/node
       - name: Install dependencies
