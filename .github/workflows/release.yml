@@ -27,17 +27,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          token: ${{ steps.app-token.outputs.token }}
+          persist-credentials: false
           fetch-depth: 0
-      - name: Setup Git config
-        env:
-          APP_SLUG: ${{ steps.app-token.outputs.app-slug }}
-          GH_TOKEN: ${{ steps.app-token.outputs.token }}
-        run: |
-          APP_USER="$APP_SLUG[bot]"
-          APP_ID="$(gh api "/users/$APP_USER" --jq .id)"
-          git config user.name "$APP_USER"
-          git config user.email "$APP_ID+$APP_USER@users.noreply.github.com"
       - name: Setup Node.js
         uses: ./.github/actions/node
       - name: Install dependencies
@@ -45,10 +36,7 @@ jobs:
       - name: Build the package
         run: npm run build
       - name: Release
-        env:
-          RELEASE_TOKEN: ${{ steps.app-token.outputs.token }}
-          ISSUE_PR_TOKEN: ${{ steps.app-token.outputs.token }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          NPM_CONFIG_PROVENANCE: true
-          IS_GITHUB_APP: "true"
-        run: npx @release-change/cli --debug
+        uses: release-change/action@v0
+        with:
+          github-token: ${{ steps.app-token.outputs.token }}
+          npm-token: ${{ secrets.NPM_TOKEN }}
