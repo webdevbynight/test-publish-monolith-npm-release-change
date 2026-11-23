@@ -1,5 +1,15 @@
 # @webdevbynight/test-publish-monolith-npm-release-change
 
+## 0.0.7
+
+### Patch changes
+
+- use `release-change/action` to publish release (#21) ([`4d75197`](https://github.com/webdevbynight/test-publish-monolith-npm-release-change/commit/4d75197016397b62c471db6f58394bda6e474db7))
+
+---
+
+**Full changelog:** [`v0.0.6...v0.0.7`](https://github.com/webdevbynight/test-publish-monolith-npm-release-change/compare/v0.0.6...v0.0.7)
+
 ## 0.0.6
 
 ### Patch changes
