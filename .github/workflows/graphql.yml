@@ -1,0 +1,35 @@
+name: GraphQL test
+
+on: pull_request
+
+permissions:
+  contents: read
+
+jobs:
+  graphql:
+    name: GraphQL test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create GitHub App token
+        uses: actions/create-github-app-token@64ab729a6294000f5aa4a4bc0b73d1f32bc45510 # v3.3.0
+        id: app-token
+        with:
+          client-id: ${{ vars.APP_CLIENT_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Test GraphQL with PAT
+        env:
+          GH_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+        run: |
+          gh api graphql -f query='{ viewer { login databaseId } }'
+      - name: Test GraphQL with GitHub App token
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+        run: |
+          gh api graphql -f query='{ viewer { login databaseId } }'
+      - name: Test GraphQL with GitHub Actions token
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api graphql -f query='{ viewer { login databaseId } }'
